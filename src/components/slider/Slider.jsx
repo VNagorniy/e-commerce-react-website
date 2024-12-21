@@ -2,6 +2,7 @@ import { IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io';
 import { sliderItems } from '../../data';
 import './Slider.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Slider() {
 	const [slideIndex, setSlideIndex] = useState(0);
@@ -29,7 +30,9 @@ function Slider() {
 						<div className="info-container">
 							<h1 className="title">{item.title}</h1>
 							<p className="desc">{item.desc}</p>
-							<button className="button">Shop Now</button>
+							<Link to="/products">
+								<button className="button">Shop Now</button>
+							</Link>
 						</div>
 					</div>
 				))}
