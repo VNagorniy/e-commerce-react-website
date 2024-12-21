@@ -19,11 +19,13 @@ function Navbar() {
 					</div>
 				</div>
 
-				<div className="navbar-center">
-					<h1 className="navbar-logo">
-						Rise of Coding <span>.</span>
-					</h1>
-				</div>
+				<Link to="/">
+					<div className="navbar-center">
+						<h1 className="navbar-logo">
+							Rise of Coding <span>.</span>
+						</h1>
+					</div>
+				</Link>
 
 				<div className="navbar-right">
 					<Link to="/register">
@@ -32,10 +34,12 @@ function Navbar() {
 					<Link to="/login">
 						<div className="navbar-menuItem">Login</div>
 					</Link>
-					<div className="navbar-menuItem">
-						<MdOutlineShoppingCart className="icon" />
-						{totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
-					</div>
+					<Link to="/cart">
+						<div className="navbar-menuItem">
+							<MdOutlineShoppingCart className="icon" />
+							{totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+						</div>
+					</Link>
 				</div>
 			</div>
 		</nav>
